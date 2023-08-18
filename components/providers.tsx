@@ -13,10 +13,9 @@ interface Props {
 export function Providers({ children }: Props) {
   return (
     <CartProvider
-      currency="INR"
+      currency="USD"
       shouldPersist
       cartMode="checkout-session"
-      stripe="checkout-session"
       stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!}
     >
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
